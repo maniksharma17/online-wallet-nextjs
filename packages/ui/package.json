@@ -3,6 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+"./input-box": "./src/input-box.tsx",
+"./select": "./src/select.tsx",
+"./center": "./src/center.tsx",
+"./sidebar-item": "./src/sidebar-item.tsx",
+"./home-design": "./src/home-design.tsx",
+"./otp-page": "./src/otp-page.tsx",
+"./auth-input-box": "./src/auth-input-box.tsx",
+"./signup-page": "./src/signup-page.tsx",
+"./signin-page": "./src/signin-page.tsx",
+"./app-bar": "./src/app-bar.tsx",
     "./button": "./src/button.tsx",
     "./card": "./src/card.tsx",
     "./code": "./src/code.tsx"

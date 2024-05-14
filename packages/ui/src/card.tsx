@@ -1,25 +1,24 @@
+
 export function Card({
-  className,
   title,
   children,
-  href,
+  height
 }: {
-  className?: string;
-  title: string;
-  children: React.ReactNode;
-  href: string;
+  title: string,
+  children?: React.ReactNode,
+  height?: string | ""
 }): JSX.Element {
   return (
-    <a
-      className={className}
-      href={`${href}?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"`}
-      rel="noopener noreferrer"
-      target="_blank"
+    <div
+      className={`border p-2 pb-4 relative rounded h-[${(height!='')? height: ""}] overflow-scroll`}
     >
-      <h2>
-        {title} <span>-&gt;</span>
-      </h2>
-      <p>{children}</p>
-    </a>
+      <h1 className="text-xl absolute z-50 right-1 left-1 top-1 text-center pb-2 mb-4 bg-blue-900 text-white p-2 font-thin rounded">
+        {title}
+      </h1>
+      <div className="mt-12">
+      {children}
+      </div>
+      
+    </div>
   );
 }

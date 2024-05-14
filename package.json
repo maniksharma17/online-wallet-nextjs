@@ -20,5 +20,11 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
+    "install": "^0.13.0",
+    "recoil": "^0.7.7"
+  }
 }

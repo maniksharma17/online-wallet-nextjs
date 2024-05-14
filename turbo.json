@@ -1,9 +1,11 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDependencies": [".env"],
+  "globalEnv": ["GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, JWT_SECRET"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
+      "env": ["GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, JWT_SECRET"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {
@@ -11,7 +13,8 @@
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "env": ["GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, JWT_SECRET"]
     }
   }
 }

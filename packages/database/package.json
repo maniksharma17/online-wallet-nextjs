@@ -1,0 +1,25 @@
+{
+  "name": "@repo/database",
+  "version": "1.0.0",
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.13.0",
+    "bcrypt": "^5.1.1"
+  },
+  "devDependencies": {
+    "prisma": "^5.13.0"
+  },
+  "exports": {
+    "./client": "./index.ts"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

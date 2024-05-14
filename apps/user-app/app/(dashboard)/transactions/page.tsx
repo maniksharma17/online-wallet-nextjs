@@ -5,10 +5,16 @@ import { SentTransactions } from "../../../components/sentTransactions"
 import { ReceivedTransactions } from "../../../components/receivedTransactions"
 
 
+interface sentTransactionsType{
+    amount: number,
+    toUserPhone: string,
+    time: Date
+}
+
 async function getSentTransactions(){
     const session = await getServerSession(authOptions)
 
-    const sentTransactions = await prisma.p2pTransactions.findMany({
+    const sentTransactions: sentTransactionsType[] = await prisma.p2pTransactions.findMany({
         where: {
             fromId: Number(session.user.id)
         }

@@ -42,4 +42,4 @@ jobs:
           sudo docker pull maniksharma17/payzap-online-wallet:latest
           sudo docker stop payzap-online-wallet || true
           sudo docker rm payzap-online-wallet || true
-          sudo docker run -d --name payzap-online-wallet -p 3005:3000 -e DATABASE_URL="ostgres://avnadmin:AVNS_ZcXAtToDmCHzMi07SwD@pg-d427b22-maniksharma-1ba0.l.aivencloud.com:23009/defaultdb?sslmode=require" maniksharma17/payzap-online-wallet:latest
+          sudo docker run -d --name payzap-online-wallet -p 3005:3000 -e DATABASE_URL=${{ secrets.DATABASE_URL }} maniksharma17/payzap-online-wallet:latest

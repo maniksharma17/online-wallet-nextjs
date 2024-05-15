@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgres://avnadmin:AVNS_ZcXAtToDmCHzMi07SwD@pg-d427b22-maniksharma-1ba0.l.aivencloud.com:23009/defaultdb?sslmode=require"
 }
 
 model User {

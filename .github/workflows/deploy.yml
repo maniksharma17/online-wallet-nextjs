@@ -40,6 +40,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           sudo docker pull maniksharma17/payzap-online-wallet:latest
-          sudo docker stop web-app || true
-          sudo docker rm web-app || true
-          sudo docker run -d --name web-app -p 3005:3000 maniksharma17/payzap-online-wallet:latest
+          sudo docker stop payzap-online-wallet || true
+          sudo docker rm payzap-online-wallet || true
+          sudo docker run -d --name payzap-online-wallet -p 3005:3000 maniksharma17/payzap-online-wallet:latest
